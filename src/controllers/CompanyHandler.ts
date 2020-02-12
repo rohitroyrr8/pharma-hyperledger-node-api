@@ -4,7 +4,7 @@ import { SupplyChainResponse } from '../models/SupplyChainResponse';
 import * as log4js from 'log4js';
 
 const contractHelper = require('../helpers/contractHelper');
-const logger = log4js.getLogger('SupplyChain log');
+const logger = log4js.getLogger('SupplyChain logs');
 
 export default function CompanyHandler(app: express.Application) {
 
