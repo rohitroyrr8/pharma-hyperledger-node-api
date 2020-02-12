@@ -2,4 +2,4 @@
 
 npm install
 
-npm run prepublishOnly
+npm run build

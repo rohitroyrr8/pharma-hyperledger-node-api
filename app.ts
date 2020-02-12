@@ -8,7 +8,7 @@ import * as jwt from 'jsonwebtoken';
 import util = require('util');
 import log4js = require('log4js');
 import controllers from './src/controllers';
-const logger = log4js.getLogger('Pharma SupplyChain')
+const logger = log4js.getLogger('SupplyChain log');
 const bearerToken = require('express-bearer-token');
 const app = express();
 
