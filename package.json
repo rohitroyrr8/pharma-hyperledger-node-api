@@ -1,0 +1,42 @@
+{
+  "name": "pharma-hyperledger-node-api",
+  "version": "1.0.1",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohitroyrr8/pharma-hyperledger-node-api.git"
+  },
+  "author": "Rohit Roy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohitroyrr8/pharma-hyperledger-node-api/issues"
+  },
+  "homepage": "https://github.com/rohitroyrr8/pharma-hyperledger-node-api#readme",
+  "dependencies": {
+    "@types/mocha": "^7.0.1",
+    "@types/node": "^13.7.1",
+    "body-parser": "^1.19.0",
+    "cookie-parse": "^0.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "express-bearer-token": "^2.4.0",
+    "express-jwt": "^5.3.1",
+    "fabric-ca-client": "^1.4.5",
+    "fabric-client": "^1.4.5",
+    "jsonwebtoken": "^8.5.1",
+    "log4js": "^6.1.2",
+    "mysql": "^2.18.1",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.7.5",
+    "typescript-eslint-parser": "^22.0.0"
+  }
+}
