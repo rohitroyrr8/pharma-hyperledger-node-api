@@ -6,8 +6,8 @@ import * as log4js from 'log4js';
 const contractHelper = require('../helpers/contractHelper');
 const logger = log4js.getLogger('SupplyChain logs');
 
-export default function DrugHandler(app: express.Application) {
-    async function addDrug(req: any, res: express.Response) {
+export default function PurchaseOrderHandler(app: express.Application) {
+    async function createPurchaseOrder(req: any, res: express.Response) {
         let supplyChainResponse: SupplyChainResponse = null;
         try {
             if(!req.user) {
@@ -28,18 +28,5 @@ export default function DrugHandler(app: express.Application) {
         }
     }
 
-    async function fetchDrug(req: any, res: express.Response) {
-        try {
-            let contract = contractHelper.getContractInstance();
-            const responseBuffer: Buffer = await contract.evaluateTransaction('fetchCompany', JSON.stringify(req));
-            const response: any= JSON.parse(responseBuffer.toString('utf-8'));
-
-            return res.status(200).send(response);
-        } catch (error) {
-            return res.status(500).send('Someting went wrong. Error: '+error);
-        }
-    }
-
-    app.get('/get-drug', fetchDrug);
-    app.post('/add-drug', addDrug);
+    app.post('/create-purchase-order', createPurchaseOrder);
 }
