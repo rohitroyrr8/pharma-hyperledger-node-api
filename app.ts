@@ -3,11 +3,12 @@ import * as cors from 'cors';
 import * as bodyParser from 'body-parser';
 import * as dotenv from 'dotenv';
 import * as http from 'http';
-import expressJWT from 'express-jwt';
 import * as jwt from 'jsonwebtoken';
 import util = require('util');
 import log4js = require('log4js');
+import expressJWT = require('express-jwt');
 import controllers from './src/controllers';
+
 const logger = log4js.getLogger('SupplyChain logs');
 const bearerToken = require('express-bearer-token');
 const app = express();
@@ -22,6 +23,8 @@ app.use(bodyParser.urlencoded({
   extended : false
 }));
 
+app.set('secret', JWTSecret);
+app.use(expressJWT())
 //app.use('secret', JWTSecret);
 
 controllers(app);
