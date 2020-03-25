@@ -42,5 +42,8 @@ export default function CompanyHandler(app: express.Application) {
     }
 
     app.get('/get-company', fetchCompany);
+    app.get('/hello', (req: any, res: express.Response) => {
+        return res.status(200).send("yay, its working.");
+    });
     app.post('/register-company', registerCompany);
 }

@@ -1,0 +1,15 @@
+version: "3"
+networks:
+  pharma_node_api:
+    external: true
+services:
+  fabric-gateway:
+    networks:
+      - pharma_node_api
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      ENV_NAME: dev
+    ports:
+      - 3000:3000

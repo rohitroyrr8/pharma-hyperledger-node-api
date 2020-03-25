@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.set('secret', JWTSecret);
-app.use(expressJWT())
+
 //app.use('secret', JWTSecret);
 
 controllers(app);
