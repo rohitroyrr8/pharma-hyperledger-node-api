@@ -7,7 +7,6 @@ WORKDIR /usr/src/app
 COPY package.json .
 # Install all Packages
 RUN npm install grpc
-RUn npm update
 RUN npm install
 
 # Copy all other source code to work directory
