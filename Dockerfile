@@ -6,10 +6,9 @@ WORKDIR /usr/src/app
 # Only copy the package.json file to work directory
 COPY package.json .
 # Install all Packages
-RUN npm install grpc
-RUn npm update
 RUN npm install
 
+RUN npm install -g typescript
 # Copy all other source code to work directory
 ADD . /usr/src/app
 
