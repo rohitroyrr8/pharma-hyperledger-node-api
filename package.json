@@ -33,7 +33,7 @@
     "fabric-ca-client": "^1.4.5",
     "fabric-client": "^1.4.5",
     "jsonwebtoken": "^8.5.1",
-    "log4js": "^6.1.2",
+    "log4js": "^6.4.0",
     "mysql": "^2.18.1",
     "ts-node": "^8.6.2",
     "typescript": "^3.7.5",
